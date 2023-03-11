@@ -14,8 +14,8 @@ body {
   font-weight: bold;
   text-align: center;
   margin: 2rem;
-  background-image: linear-gradient(to right, red, yellow);
-  background-image: -webkit-linear-gradient(to right, red, yellow);
+  background-image: linear-gradient(to right, red, yellow, green, blue);
+  background-image: -webkit-linear-gradient(to right, red, yellow, green, blue);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -38,12 +38,12 @@ body {
   margin: 1rem;
 }
 
-.player {
-  outline: none;
-  border-radius: 5px;
-  width: 100px;
+.status {
   padding: 10px;
   font-size: 2rem;
+  color: rgb(9, 39, 235);
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
 }
 
 .player:hover {
@@ -67,6 +67,7 @@ body {
 }
 
 .cell {
+  display: flex;
   background-color: grey;
   font-size: 3rem;
   font-weight: 700;
@@ -74,6 +75,8 @@ body {
   width: 5rem;
   height: 5rem;
   border: 1px solid black;
+  align-items: center;
+  justify-content: center;
 }
 
 .cell:hover {
@@ -86,4 +89,13 @@ body {
   padding: 3px;
   color: red;
   text-align: center;
+  border-radius: 5px;
+}
+
+#reset:hover {
+  filter: brightness(0.7);
+}
+
+.deactivate {
+  pointer-events: none;
 }
